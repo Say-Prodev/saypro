@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tawsilla</title>
+</head>
+<body>
+    <!---------section navbar/logo--------->
+    <header>
+        <div class="head-container">
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;TawSilla &nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;TawSilla&nbsp;</span>
+            </button>
+            <div class="menu">
+                <button class="btn" id="btn-id" onclick="login()">
+                    <img src="photo/3177440.png" alt="">
+                </button>
+                <i class='bx bxs-chevron-down'  id="btn-id" onclick="ToggleMenu()" ></i>
+                <div class="menu-deroulent" id="dropdown-menu">
+                    <a href="accueil.html">accueil</a>
+                    <a href="recherchetrajet.html">recherche trajet</a>
+                    <a href="detailsTrajet.html">details trajet</a>
+                    <a href="compteConducteur.html">Conducteur</a>
+                    <a href="comptePassager.html">Passager</a>
+                    <a href="NewTrajet.html">nouveau trajet</a>
+                    <a href="GestionTrajet.html">Gestion Trajet</a>
+                    <a href="signUp.html">sign Up</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+   <!--------section photo de navbar---------> 
+    <div class="image-container">
+        <img class="image" src="photo/Capture d'écran 2024-04-25 190001.png" alt="">
+   </div>
+        
+    <h1 class="details-h1"> Journey details</h1>
+    <div class="profile">
+        <img src="photo/def7ad7eea6f05a2b6d76c5ff2b02b5e.jpg" alt="Bus Icon" class="avatar">
+        <span class="name">Sami</span> 
+
+        <div class="options-section-1">
+            
+            <ul class="options-list-1">
+                <li>Evaluation:</li>
+                <li>Expérience:</li>
+                <li>Catégorie conduite:</li>
+                <li>Annulation et retard:</li>
+                <li>Contacter le Conducteur:</li>
+            </ul>
+        </div>
+
+    </div>  
+    <div class="options-section">
+        <h2>Options:</h2>
+        <ul class="options-list">
+            <li>Interdit de fumer</li>
+            <li>Conducteur certifié</li>
+            <li>Trajet direct</li>
+        </ul>
+    </div>
+
+        <div class="card-1">
+            <div class="time-1">
+                <span>14:45</span>
+                <span id="timeS">6h20</span>
+                <span>21:05</span>
+            </div>
+            <div class="route-1">
+                <div>Annaba</div>
+                <div>Constantine</div>
+            </div>
+            <div class="date-price-1">
+                <div class="date-1">20/02/24</div>
+                <div class="price-1">180 DA</div>
+            </div>
+            <div class="icons-1">
+                <span>🚭</span>
+                <span>🌟</span>
+                <span>🏹</span>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <!------------section footer------------------->
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Contact:</h3>
+                    <a href="#">Tel: +213549148104</a>
+                    <a href="#">Email: Zizou20002021@gmail.com</a>
+                    <a href="#">address: 176Log bloc C annaba.</a>
+                </div>
+        
+                <div class="box">
+                    <h3>quick links:</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">twitter</a>
+                </div>
+               
+                <div class="box">
+                    <h3>miscellaneous information:</h3>
+                    <p >our partner <br> our regionalheadquarters</p>
+                </div>
+            </div>
+        </section>     
+    <script src="script.js"></script>
+</body>
+</html>

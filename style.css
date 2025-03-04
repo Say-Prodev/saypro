@@ -1,0 +1,1124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root{   /* mes couleur de site covoiturage version 2*/
+    --main-color: #fff;
+    --secondary-color: #94f7e6;
+    --therd-color:#10d5b5;
+    --shadow1:#333;
+    --shadow2:#1a53ff; 
+    --shadow3:#666;
+    --RedShadow:#ff5c33;
+    --buttonSearch: red;
+    --textColor: black;
+    --footerStyle:#10382b;
+    --tableColor:#bccedc;
+    --animation-color: #37FF8B;
+    --placeholderColor: #888 ;
+    --text-stroke-color: rgba(18, 17, 17, 0.6);
+    --manageButton:#00bfff;
+    --ratingRadio:#ff9e0b;
+    --buttonOK: #4CAF50;
+    --border-right: 6px;
+    --fs-size: 2em;
+}
+
+/**************************button tawsiila **************************/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    right:1%;  
+}
+  
+.button {
+  letter-spacing: 3px;
+  font-size: var(--fs-size);
+  font-family:cursive; /*gorgia*/
+  position: relative;
+  text-transform:none ;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);   
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+  
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+} 
+
+.animated-button a{
+    text-decoration: none;
+}
+
+/*******************************************************/
+
+
+.head-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.menu {
+    display: flex; 
+    align-items: center; /* Pour aligner verticalement les éléments */
+    position: relative;
+}
+
+.menu i{
+    cursor: pointer;
+}
+
+.btn {
+    margin-left: auto; /* Pour pousser le bouton à l'extrémité droite */
+}
+header {
+    background-color:var(--main-color); 
+    height: 60px; 
+    padding: 0 20px;
+    box-shadow: 0 2px 4px var(--textColor);
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; 
+}
+
+
+            /**************REGLAGE DE BALISE DE i ***************/
+.menu-deroulent {           
+    display: none;
+    position: absolute;
+    top:calc(100px + 10px);
+    left: 0;
+    background-color:var(--main-color);
+    min-width: 150px;
+    box-shadow: 0 2px 5px var(--textColor);
+    z-index: 1;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0,3s ease-in-out ;
+
+}
+
+.menu-deroulent a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--shadow1);
+
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.btn img {
+    width: 25px;
+    height: 25px;
+    transform: scale(1.6);
+    margin-right: 5px;
+}
+
+.bx.bxs-chevron-down {
+    font-size: 24px;
+    color: var(--shadow1);
+    cursor: pointer;
+}
+
+.image-container{
+    width: 100vw;
+    height: 10vw;
+    position: absolute;
+    display:flex;
+    padding-top:9px;
+    overflow: hidden;
+
+}
+
+.menu .bx.bxs-chevron-down {
+    cursor: pointer; 
+}
+
+.menu-deroulent {
+    position: absolute;
+    top: calc(100% + 10px); /* Positionner le menu juste en dessous de l'icône */
+    right: 0;
+    background-color: var(--main-color);
+    min-width: 150px;
+    box-shadow: 0 2px 5px var(--textColor);
+    z-index:1;
+    left: -80%;
+    display: none; /* Masquer le menu par défaut */
+    padding: 5px;
+}
+
+.menu-deroulent a {
+    display:list-item;
+    list-style: none;
+    padding: 10px;
+    top: 50px;
+    text-decoration: none;
+    color: var(--shadow3);
+}
+
+.menu-deroulent a:hover {
+    background-color: var(--main-color);
+    color: var(--RedShadow) ;
+    text-decoration: underline;
+}
+
+
+/************************ IMG ET FORM SECTION***************************/
+
+.image-container{
+    width: 100vw;
+    height: 10vw;
+    position: absolute;
+    display:flex;
+    padding-top:9px;
+    overflow: hidden;
+
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover contain;
+}
+
+
+form{
+    margin-bottom: 30px;
+    position: absolute;
+    top: 32%; /* Positionne le formulaire au centre vertical de l'image */
+    left: 50%; /* Positionne le formulaire au centre horizontal de l'image */
+    transform: translate(-50%, -50%); 
+    background-color: var(--main-color); 
+    padding: 5px;
+    border-radius: 20px 20px 20px;
+    box-shadow: 0 2px 5px var(--textColor);
+    
+}
+
+.search-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+
+}
+
+.search-container input[type="text"]{
+    padding: 10px;
+    border: var(--main-color);
+    border-radius: 4px;
+}
+
+.search-container input[type="text"]:focus{
+    outline: none;
+    border-color: var(--buttonSearch); 
+}
+
+.search-container button {
+    background-color: var(--buttonSearch); 
+    color:var(--main-color);
+    border: none;
+    cursor: pointer;
+}
+
+
+form p::after{
+    background-color: var(--shadow2);
+    display: block;
+    content: ""; /* pour faire un tri comme dans h1 de voyage et ext*/
+    width: 2px;
+    height:15px;
+    margin-top:5%;
+    margin-left:-35%;
+}
+
+button[type="submit"] {
+    position:absolute;
+    top: 0;
+    right: -45px; /* Positionne le bouton à droite avec un espace de 20px du bord */
+    padding: 20px 20px;
+    background-color: var(--buttonSearch);
+    color: var(--main-color);
+    border: none;
+    border-radius: 20px 20px 20px ;
+    cursor: pointer;
+    
+}
+
+
+/******************* PAGE DE ACCEUIL***********/
+
+#accueil_h1{
+    position: relative;
+    font-weight:bold;
+    font-size:40px;
+    font-weight: bold;
+    margin-left:19% ;
+    color: var(--footerStyle);
+}
+
+
+
+.packages .container{
+    margin-top:11% ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.packages .container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.packages .container .box .rbox{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.packages .container .box .content{
+    padding: 32px;
+    display: flex;
+    justify-content: row;
+}
+.packages .container .box img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.packages .container .box .rbox img{
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+    padding-right: 10px;
+}
+.packages .container .box .content p{
+    font-size: 25px;
+    color: var(--shadow3);
+    padding: 16px 16px;
+}
+.packages .container .box .rbox .content p{
+    font-size: 20px;
+    color: var(--shadow3);
+}
+.packages .container .box h1{
+    position: relative;
+    color: var(--footerStyle);
+    padding: 0px 2px 5px 0;
+    font-size: 40px;
+}
+
+
+.footer_acc{
+    margin-top:5% ;/*********/
+    background: var(--shadow2);
+}
+.footer_acc .box-container_acc{
+    display:  flex;
+    flex-wrap: wrap;
+    background-color: var(--footerStyle);
+    
+}
+
+
+.footer_acc .box-container_acc .box_acc{
+    padding: 5px 0;
+    flex: 5 5 25px;
+}
+.footer_acc .box-container_acc .box_acc h3{
+    font-size: 20px;
+    padding: 5px 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box p{
+    font-size: medium;
+    padding: 5px 10px;
+    color: var(--main-color);
+}
+.footer_acc .box-container_acc .box_acc a{
+    font-size: medium;
+    padding: .7rem 0;
+    color: var(--main-color);
+    display: block;
+}
+.footer_acc .box-container_acc .box_acc a:hover{
+    color:var(--buttonSearch);
+    text-decoration: underline;
+}
+/*********************************************/
+/************FOOTER STYLE*************/
+
+.footer{
+    margin-top:5% ;
+    background: var(--shadow2);
+}
+.footer .box-container{
+    display:  flex;
+    flex-wrap: wrap;
+    background-color: var(--footerStyle);
+    
+}
+.footer .box-container .box{
+    padding: 5px 0;
+    flex: 5 5 25px;
+}
+.footer .box-container .box h3{
+    font-size: 20px;
+    padding: 5px 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box p{
+    font-size: medium;
+    padding: 5px 10px;
+    color: var(--main-color);
+}
+.footer .box-container .box a{
+    font-size: medium;
+    padding: .7rem 0;
+    color: var(--main-color);
+    display: block;
+}
+.footer .box-container .box a:hover{
+    color:var(--buttonSearch);
+    text-decoration: underline;
+}
+
+/**************** RechercheTrajet "PAGE2" ********************/
+
+#rech_h1{
+    position: relative;
+    font-weight:bold;
+    font-size:40px;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.input-radio, 
+.input-checkBox{
+    position: absolute;
+    margin-top:20% ;
+    transform: translate(-50%, -50%);
+    left: 15%;
+    font-style: 25px;
+    font-family: "Roboto mono",monospace;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+
+
+.input-radio [input] {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.radio, 
+.checkBox {
+    margin-bottom: 10px;
+}
+
+.radio label, 
+.checkBox label {
+    display: block;
+}
+
+label{
+    font-size: 20px;
+}
+
+label input{
+    float: right;
+    flex-direction: column;    
+}
+
+diver p{
+    position: absolute;
+    margin: 0 0 0 350px ;
+    margin-top:180px ;
+    margin-left: 10%;
+    padding: 30px;
+}
+
+
+/************************CARD DE TRAJET***************************************/
+.card {
+    margin:1% 0 0 60%;   /* top/button/right/left*/
+    background-color: var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--textColor);
+    padding: 10px 20px;
+    width: 250px;
+    text-align: left;
+    
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: bold;
+    color:var(--therd-color);
+}
+
+.route {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.route span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.duration {
+    font-size: 12px;
+    color: var(--RedShadow);
+    margin: 5px 0;
+}
+
+.bus-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bus-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.company {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 14px;
+    color: var(--buttonSearch);
+    font-weight: bold;
+}
+/************************** detailsTrajet "page3" **********************/
+
+/********************************** card 1**************************/
+
+.details-h1{
+    position: absolute;
+    margin: 13% 0 0 36%;
+    font-size:xxx-large;
+    font-weight: bold;
+}
+
+.card-1 {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: 18% 0 0 32%;
+    width: 300px;
+    padding: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--textColor);
+}
+
+.time-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+#timeS{
+    color: var(--RedShadow);
+}
+
+.time-1 span {
+    font-weight: bold;
+    color: var(--therd-color);
+}
+
+.route-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.route-1 div {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--shadow1);
+}
+
+.date-price-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.date-1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--shadow1);
+}
+
+.price-1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--buttonSearch);
+}
+
+.icons-1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.profile {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin:25% 0 0 15%;
+}
+
+.avatar {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: var(--main-color);
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--shadow1);
+}
+
+
+.options-section {
+    position: absolute;
+    text-align: left;
+    margin: 28% 0 0 69%;
+
+}
+
+h2 {
+    margin: 0;
+    font-size: 29px;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.options-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options-list li {
+    color: var(--therd-color);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+
+.options-section-1 {
+    text-align: left;
+    margin: 5% 0 0 0;
+
+}
+
+.options-list-1 {
+    position: absolute;
+    list-style-type: none;
+    margin:5px 0;
+}
+
+.options-list-1 li {
+    color: var(--therd-color);
+    font-size: 16px;
+    margin: 0 0 0 -160%;
+}
+
+/*************************Gestion de trajet "Page 7" ****************************/
+
+.Manage_h1 {
+    position:absolute;
+    text-align: center;
+    justify-content: center;
+    margin: 12% 0 0 35%;
+    font-size: 2.5rem;
+    font-family: "Rubik", sans-serif;
+    
+}
+
+.journey-info {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    margin: 17% 0 0 29%;
+    font-size: 1.5rem;
+    font-family: "Rubik" , sans-serif;
+}
+
+.containerManage {
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin: 20% 0 ;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.Manage {
+    position: relative;
+    width: 250%;
+    margin-top:-25% ;
+    margin-left: 65%;
+    border-collapse: collapse;
+    background-color: var(--tableColor);
+}
+
+
+.tab_btn{
+    margin-left: 350%;
+    margin-top:20%;
+    display: flex;
+   
+    background-color: var(--main-color);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--main-color);
+}
+
+th {
+    background-color: var(--main-color);
+}
+
+button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ok-btn {
+    background-color: var(--buttonOK);
+    color: var(--main-color);
+}
+
+.no-btn {
+    background-color: var(--buttonSearch);
+    color: var(--main-color);
+}
+
+.return-btn {
+    background-color: var(--manageButton);
+    color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*****************footer************/
+
+.footer-g{
+    margin-top:55% ;/*********/
+    background: var(--shadow2);
+}
+.footer-g .box-container-g{
+    display:  flex;
+    flex-wrap: wrap;
+    background-color: var(--footerStyle);
+    
+}
+.footer-g .box-container-g .box-g{
+    padding: 5px 0;
+    flex: 5 5 25px;
+}
+.footer-g .box-container-g .box-g h3{
+    font-size: 20px;
+    padding: 5px 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box p{
+    font-size: medium;
+    padding: 5px 10px;
+    color: var(--main-color);
+}
+.footer-g .box-container-g .box-g a{
+    font-size: medium;
+    padding: .7rem 0;
+    color: var(--main-color);
+    display: block;
+}
+.footer-g .box-container-g .box-g a:hover{
+    color:var(--buttonSearch);
+    text-decoration: underline;
+}
+
+
+
+
+/*****************section conducteur****************************/
+
+/*****************rating css**********/
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--shadow3);
+}
+
+.rating:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: var(--ratingRadio);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: var(--ratingRadio);
+}
+
+.rating > input:checked ~ label {
+  color: var(--ratingRadio);
+}
+  
+ /************************************/ 
+
+.container_cod {
+    position: relative;
+    margin: 10% 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.profile_cod, .journeys_cod {
+    background: var(--main-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 35%;
+}
+
+.MyProf {
+    text-align: center;
+    color: var(--shadow1);
+    margin-bottom: 20%;
+}
+
+.profile-item_cod {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+.profile_cod input[type="text"]{
+    color: var(--shadow3);
+    width: 50%;
+    padding: 8px;
+    border: 1.5px solid var(--shadow2);
+    border-radius:30px 30px /30px 30px;
+    box-sizing: border-box;
+    
+}
+
+.Certified{
+    color:var(--animation-color);
+    font-size: larger;
+    font-weight: bold;
+    float: left;
+    margin-right:70% ;
+}
+
+/**/
+.new-journey_cod {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    background: var(--manageButton);
+    color: var(--main-color);
+    border: none;
+    border-radius: 30px 30px / 30px 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tableMY {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--tableColor);
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+.manage-button_cod {
+    background: var(--manageButton);
+    color: var(--main-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*****************section passanger*******/
+
+.container_psg {
+    position: relative;
+    margin: 15%;
+    display: flex;
+    gap: 50px;
+    background-color: var(--main-color);
+    padding: 2px;
+    padding-right:200px ;
+    border-radius: 10px;
+}
+
+.profile_psg{
+    width: 300px;
+    float: right;
+    margin-right:15% ;
+}
+.journeys_psg {
+    width: 300px;
+    float: left;
+    
+}
+
+.Passager{
+    background-color: var(--tableColor);
+}
+
+.psg {
+    margin-bottom:45% ;
+    text-align: center;
+}
+
+.input-group_psg {
+    margin-bottom: 15px;
+}
+
+.input-group_psg label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group_psg input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid var(--shadow2);
+    border-radius:30px 30px /30px 30px;
+    box-sizing: border-box;
+    color: var(--shadow3);
+}
+
+table {
+    margin: 5% 0 0 25%;
+    width: 200%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid var(--main-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--shadow2);
+}
+
+.pending {
+    color: var(--shadow2);
+}
+
+.accepted {
+    color: var(--animation-color);
+}
+
+
+
+/************** section new Trajet*********/
+
+
+.form-containerRow {
+    margin: 13% 0 0 40%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    font-weight: bold;
+    font-family: 'Rubik';
+    box-shadow: 0;
+}
+
+.formRow1{
+    margin: 14% 0;
+    width: 45%;
+    height: 30%;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: none;
+}
+
+.form-container .Publish {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-row input {
+    width: 190%;
+    padding: 15px;
+    margin: 0 5px ;
+    border: 2px solid var(--shadow2);
+    border-radius: 30px 30px / 30px 30px;
+    box-sizing: border-box;
+}
+
+.btnRow {
+    margin:43% 0;
+    margin-right: 15%;
+    width: 80%;
+    background-color: var(--buttonSearch);
+    color: var(--main-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px 30px /30px 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btnRow:hover {
+    background-color: var(--RedShadow);
+}
+
+/****/
+
+
+.footer_new{
+    margin-top:35% ;
+    background: var(--shadow2);
+}
+.footer_new .box-container_new{
+    display:  flex;
+    flex-wrap: wrap;
+    background-color: var(--footerStyle);
+    
+}
+.footer_new .box-container_new .box_new{
+    padding: 5px 0;
+    flex: 5 5 25px;
+}
+.footer_new .box-container_new .box_new h3{
+    font-size: 20px;
+    padding: 5px 0;
+    color: var(--main-color);
+}
+
+.footer_new .box-container_new .box_new p{
+    font-size: medium;
+    padding: 5px 10px;
+    color: var(--main-color);
+}
+.footer_new .box-container_new .box_new a{
+    font-size: medium;
+    padding: .7rem 0;
+    color: var(--main-color);
+    display: block;
+}
+.footer_new .box-container_new .box_new a:hover{
+    color:var(--buttonSearch);
+    text-decoration: underline;
+}

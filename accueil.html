@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="web site icon" type="gif" href="tawsilla_logo/tawsilla.gif">    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>tawsilla</title>
+</head>
+<body>
+    <!---------section navbar/logo--------->
+    <header>
+        <div class="head-container">
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;TawSilla &nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;TawSilla&nbsp;</span>
+            </button>
+            <div class="menu">
+                <button class="btn" id="btn-id" onclick="login()">
+                    <img src="photo/3177440.png" alt="">
+                </button>
+                <i class='bx bxs-chevron-down'  id="btn-id" onclick="ToggleMenu()" ></i>
+                <div class="menu-deroulent" id="dropdown-menu">
+                    <a href="accueil.html">accueil</a>
+                    <a href="recherchetrajet.html">recherche trajet</a>
+                    <a href="detailsTrajet.html">details trajet</a>
+                    <a href="compteConducteur.html">Conducteur</a>
+                    <a href="comptePassager.html">Passager</a>
+                    <a href="NewTrajet.html">nouveau trajet</a>
+                    <a href="GestionTrajet.html">Gestion Trajet</a>
+                    <a href="signUp.html">sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-------section photo navbar---------->
+    <div class="image-container">
+        <img class="image" src="photo/Capture d'écran 2024-04-25 190001.png" alt="">
+    </div>
+    <br><br>
+    <form action="/search" method="get">
+        <div class="search-container">
+            <input type="text" name="depart" placeholder="depart" required> <p></p>
+            <input type="text" name="destination" placeholder="destination" required><p></p>
+            <input type="text" name="date"  id="combinedInput" placeholder="Date" required><p></p>
+            <input type="text" name="passenger" placeholder="passenger" required>
+        </div>
+        <button type="submit">search</button>
+    </form>
+    <!------------section box et packages---------------->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="box">
+                <div class="content">
+                    <img src="photo/Capture d'écran 2024-04-25 190011.png" alt="">
+                    <p>We take the time to get to <br>
+                        know our members and our <br>
+                        partner bus companies.profiles and IDs. so you are going to trvel with.
+                    </p>
+                </div>
+                <h1 id="accueil_h1">Go everywhere with us !</h1>
+            </div>
+            
+            <div class="box">
+
+                <div class="rbox">
+                    <div class="content">
+                        <img src="photo/Capture d'écran 2024-04-25 190019.png" alt="">
+                        <p>i was looking for a service capable of offring trips !</p>
+                    </div>
+                </div>
+            
+                <div class="rbox">
+                    <div class="content">
+                        <p> i was looking for a service capable of offring trips from several companies !</p>
+                        <img src="photo/Capture d'écran 2024-04-25 190031.png" alt="">
+                    </div>
+                </div>
+
+                <div class="rbox">
+                    <div class="content">
+                        <img src="photo/Capture d'écran 2024-04-25 190038.png" alt="">
+                        <p> << was looking for a service capable of offring trips from several companies>></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-----------section footer ------------>    
+<section class="footer_acc">
+    <div class="box-container_acc">
+        <div class="box_acc">
+            <h3>Contact:</h3>
+            <a href="#">Tel: +213549148104</a>
+            <a href="#">Email: Zizou20002021@gmail.com</a>
+            <a href="#">address: 176Log bloc C annaba.</a>
+        </div>
+
+        <div class="box_acc">
+            <h3>quick links:</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+        </div>
+       
+        <div class="box_acc">
+            <h3>miscellaneous information:</h3>
+            <p >our partner <br> our regionalheadquarters</p>
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>

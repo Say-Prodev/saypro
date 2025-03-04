@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  
+    <link rel="web site icon" type="gif" href="tawsilla_logo/tawsilla.gif">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tawsilla</title>
+</head>
+<body>
+    <!---------section navbar/logo--------->
+    <header>
+        <div class="head-container">
+            <!--<h1 class="logo">CarpoolDZ...</h1>-->
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;TawSilla &nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;TawSilla&nbsp;</span>
+            </button>
+            <div class="menu">
+                <button class="btn" id="btn-id" onclick="login()">
+                    <img src="photo/3177440.png" alt="">
+                </button>
+                <i class='bx bxs-chevron-down'  id="btn-id" onclick="ToggleMenu()" ></i>
+                <div class="menu-deroulent" id="dropdown-menu">
+                    <a href="accueil.html">accueil</a>
+                    <a href="recherchetrajet.html">recherche trajet</a>
+                    <a href="detailsTrajet.html">details trajet</a>
+                    <a href="compteConducteur.html">Conducteur</a>
+                    <a href="comptePassager.html">Passager</a>
+                    <a href="NewTrajet.html">nouveau trajet</a>
+                    <a href="GestionTrajet.html">Gestion Trajet</a>
+                    <a href="signUp.html">sign Up</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+   <!--------section photo de navbar---------> 
+    <div class="image-container">
+        <img class="image" src="photo/Capture d'écran 2024-04-25 190001.png" alt="">
+    </div>
+    <br><br>
+    <!--------section search bar--------->
+    <form action="/search" method="get">
+        <div class="search-container">
+            <input type="text" name="depart" placeholder="depart" required> <p></p>
+            <input type="text" name="destination" placeholder="destination" required><p></p>
+            <input type="text" name="date"  id="combinedInput" placeholder="Date" required><p></p>
+            <input type="text" name="passenger" placeholder="passenger" required>
+        </div>
+        <button type="submit">search</button>
+    </form>
+    <!------------section input radio/checkbox------------>
+    <diver>
+        <div class="input-radio">
+            <div class="radio">
+                <h1 id="rech_h1">Sort by: </h1>
+                <label>Lowest price <input type="radio" name="SortBy" value="Lowest price" ></label>
+                <label>Fastest route<input type="radio" name="SortBy" value="Fastest route" ></label>
+                <label>Fastest route<input type="radio" name="SortBy" value="Early departure" ></label>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+                <p>_______________________</p>
+        <div class="input-checkBox">
+            <div class="checkBox">
+                <h1 id="rech_h1">Filters:</h1>
+                <label>Direct route    <input type="checkbox" name="Filters" value="Direct route" ></label>
+                <label>  No Smoking    <input type="checkbox" name="Filters" value="No Smoking" ></label>
+                <label>Certified dirver<input type="checkbox" name="Filters" value="Certified dirver"></label>
+            </div>
+        </div>
+    </diver>   
+    <!----------section card:trajet--------->
+    <card>
+        <div class="card">
+            <div class="time-info">
+                <div class="time">14:45</div>
+                <div class="route">
+                    <span>Annaba</span>
+                    <div class="duration">6h20</div>
+                    <span>Constantine</span>
+                </div>
+                <div class="time">21:05</div>
+            </div>
+            <div class="bus-info">
+                <img src="photo/def7ad7eea6f05a2b6d76c5ff2b02b5e.jpg" alt="Bus Logo" class="bus-logo">
+                <span class="company">Sami</span>
+                <span class="price">150 DA</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="time-info">
+                <div class="time">14:45</div>
+                <div class="route">
+                    <span>Annaba</span>
+                    <span>Skikda</span>
+                    <div class="duration">6h20</div>
+                    <span>Constantine</span>
+                </div>
+                <div class="time">21:05</div>
+            </div>
+            <div class="bus-info">
+                <img src="photo/def7ad7eea6f05a2b6d76c5ff2b02b5e.jpg" alt="Bus Logo" class="bus-logo">
+                <span class="company">Sami</span>
+                <span class="price">170 DA</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="time-info">
+                <div class="time">14:45</div>
+                <div class="route">
+                    <span>Annaba</span>
+                    <div class="duration">6h20</div>
+                    <span>Constantine</span>
+                </div>
+                <div class="time">21:05</div>
+            </div>
+            <div class="bus-info">
+                <img src="photo/def7ad7eea6f05a2b6d76c5ff2b02b5e.jpg" alt="Bus Logo" class="bus-logo">
+                <span class="company">Sami</span>
+                <span class="price">250 DA</span>
+            </div>
+        </div>
+    </card>
+    <!------------section footer -------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Contact:</h3>
+                <a href="#">Tel: +213549148104</a>
+                <a href="#">Email: Zizou20002021@gmail.com</a>
+                <a href="#">address: 176Log bloc C annaba.</a>
+            </div>
+    
+            <div class="box">
+                <h3>quick links:</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+            </div>
+           
+            <div class="box">
+                <h3>miscellaneous information:</h3>
+                <p >our partner <br> our regionalheadquarters</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

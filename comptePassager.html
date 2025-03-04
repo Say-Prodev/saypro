@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tawsilla</title>
+</head>
+<body>
+    <!---------section navbar/logo--------->
+    <header>
+        <div class="head-container">
+            <button class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;TawSilla &nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;TawSilla&nbsp;</span>
+            </button>
+            <div class="menu">
+                <button class="btn" id="btn-id" onclick="login()">
+                    <img src="photo/3177440.png" alt="">
+                </button>
+                <i class='bx bxs-chevron-down'  id="btn-id" onclick="ToggleMenu()" ></i>
+                <div class="menu-deroulent" id="dropdown-menu">
+                    <a href="accueil.html">accueil</a>
+                    <a href="recherchetrajet.html">recherche trajet</a>
+                    <a href="detailsTrajet.html">details trajet</a>
+                    <a href="compteConducteur.html">Conducteur</a>
+                    <a href="comptePassager.html">Passager</a>
+                    <a href="NewTrajet.html">nouveau trajet</a>
+                    <a href="GestionTrajet.html">Gestion Trajet</a>
+                    <a href="signUp.html">sign Up</a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+   <!--------section photo de navbar---------> 
+    <div class="image-container">
+        <img class="image" src="photo/Capture d'écran 2024-04-25 190001.png" alt="">
+    </div>
+
+
+
+
+    <!----------section passanger----------->
+    <div class="container_psg">
+        <div class="profile_psg">
+            <h2 class="psg">My profile</h2>
+            <div class="input-group_psg">
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="name" readonly>
+            </div>
+            <div class="input-group_psg">
+                <label for="email">Email:</label>
+                <input type="text" id="email" value="address Email" readonly>
+            </div>
+            <div class="input-group_psg">
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" value="numbre Phone" readonly>
+            </div>
+        </div>
+        <div class="journeys_psg">
+            <h2 class="psg">My journeys</h2>
+            <table class="Passager">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Depart/Arrival</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2/2/23</td>
+                        <td>17h</td>
+                        <td>Algies/Setif</td>
+                        <td class="pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>3/2/24</td>
+                        <td>10h</td>
+                        <td>Annaba/Agies</td>
+                        <td class="accepted">Accepted</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!------------section footer------------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Contact:</h3>
+                <a href="#">Tel: +213549148104</a>
+                <a href="#">Email: Zizou20002021@gmail.com</a>
+                <a href="#">address: 176Log bloc C annaba.</a>
+            </div>
+    
+            <div class="box">
+                <h3>quick links:</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+            </div>
+           
+            <div class="box">
+                <h3>miscellaneous information:</h3>
+                <p >our partner <br> our regionalheadquarters</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
